@@ -1,1 +1,11 @@
-server.port=8081
+naver:
+  url:
+    search:
+      local: https://openapi.naver.com/v1/search/local.json
+      image: https://openapi.naver.com/v1/search/image
+  client:
+    id: xhIsOuaaCmPOyeXcPxjp
+    secret: rCjzFCm4tX
+
+application:
+  properties:

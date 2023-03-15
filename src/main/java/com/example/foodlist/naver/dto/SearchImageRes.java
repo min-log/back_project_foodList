@@ -9,14 +9,13 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class SearchLocalRes {
+public class SearchImageRes {
 
     private String lastBuildDate;
     private int total;
     private int start;
     private int display;
-    private String category;
-    private List<SearchLocalItem> items;
+    private List<SearchImageItem> items;
 
 
     //item 안에 데이터들이 들어있음 리스트 형태
@@ -24,16 +23,13 @@ public class SearchLocalRes {
     @Data
     @NoArgsConstructor
     @AllArgsConstructor
-    public static class SearchLocalItem{
+    public static class SearchImageItem{
         private String title;
         private String link;
-        private String category;
-        private String description;
-        private String telephone;
-        private String address;
-        private String roadAddress;
-        private int mapx;
-        private int mapy;
+        private String thumbnail;
+        private String sizeheight;
+        private String sizewidth;
+
     }
 
 

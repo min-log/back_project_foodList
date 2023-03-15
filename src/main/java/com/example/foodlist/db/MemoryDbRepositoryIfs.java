@@ -16,7 +16,7 @@ public interface MemoryDbRepositoryIfs<T> {
     void deleteById(int index);
 
     //전체 리스트
-    List<T> listAll();
+    List<T> fintAll();
 
 
 }

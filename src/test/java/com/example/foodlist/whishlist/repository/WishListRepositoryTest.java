@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class WhisListRepositoryTest {
+public class WishListRepositoryTest {
     @Autowired
     private WishListRepository wishListRepository;
 
@@ -18,7 +18,7 @@ public class WhisListRepositoryTest {
         wishList.setTitle("title");
         wishList.setCategory("category");
         wishList.setAddress("Address");
-        wishList.setReedAddress("ReadAddress");
+        wishList.setRoadAddress("ReadAddress");
         wishList.setHomePageLink("");
         wishList.setImageLink("");
         wishList.setVisite(false);
@@ -47,7 +47,7 @@ public class WhisListRepositoryTest {
         expected.setTitle("Update test");
         var saveEntity = wishListRepository.save(expected);
         Assertions.assertEquals("Update test",saveEntity.getTitle());
-        Assertions.assertEquals(1,wishListRepository.listAll().size());
+        Assertions.assertEquals(1,wishListRepository.fintAll().size());
     }
 
     @Test
@@ -66,7 +66,7 @@ public class WhisListRepositoryTest {
         var wishListEntity = create();
         wishListRepository.save(wishListEntity);
         wishListRepository.deleteById(1);
-        int count = wishListRepository.listAll().size();
+        int count = wishListRepository.fintAll().size();
         Assertions.assertEquals(0,count);
     }
     @Test
@@ -75,7 +75,7 @@ public class WhisListRepositoryTest {
         wishListRepository.save(wishListEntity1);
         var wishListEntity2 = create();
         wishListRepository.save(wishListEntity2);
-        int count = wishListRepository.listAll().size();
+        int count = wishListRepository.fintAll().size();
         Assertions.assertEquals(2,count);
     }
 }
